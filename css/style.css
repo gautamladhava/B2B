@@ -1,0 +1,484 @@
+html, body {
+    height: 100%;
+    font-family: 'Gotham-Book';
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
+    font-smoothing: initial;
+    text-rendering: initial;
+    position: relative;
+}
+
+/*************** FONT FACE ******************/
+@font-face {
+    font-family: 'GothamCondensedBold';
+    src: url('../fonts/GothamCondensedBold.eot');
+    src: url('../fonts/GothamCondensedBold.eot') format('embedded-opentype'),
+        url('../fonts/GothamCondensedBold.woff2') format('woff2'),
+        url('../fonts/GothamCondensedBold.woff') format('woff'),
+        url('../fonts/GothamCondensedBold.ttf') format('truetype'),
+        url('../fonts/GothamCondensedBold.svg#GothamCondensedBold') format('svg');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/Gotham-Book.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/Gotham-Book.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/Gotham-Book.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/Gotham-Book.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham-Medium.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/Gotham-Medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/Gotham-Medium.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/Gotham-Medium.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/Gotham-Medium.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold.eot');
+    src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Bold.woff') format('woff'),
+        url('../fonts/Gotham-Bold.ttf') format('truetype'),
+        url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('../fonts/Gotham-Black.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/Gotham-Black.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/Gotham-Black.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/Gotham-Black.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/Gotham-Black.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-light';
+    src: url('../fonts/Gotham-Light.eot');
+    src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Light.woff') format('woff'),
+        url('../fonts/Gotham-Light.ttf') format('truetype'),
+        url('../fonts/Gotham-Light.svg#Gotham-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*************** FONT FACE ******************/
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.clearfix:after, .clearfix:before {
+    content: " ";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.alignleft {
+    float: left
+}
+
+.alignright {
+    float: right
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -moz-transition: all .5s
+}
+
+a:hover {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -moz-transition: all .5s
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: inline-block
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --black2: #454845;
+    --black1: #040404;
+    --black3: #212529;
+    --blue: #0158ff;
+    --blue1: #04bbff;
+    --yellow: #af7303;
+    --red: #d80b1c;
+    --green: #03c820;
+    --gray: #cecece;
+    --gray1: #7d7b7b;
+    --perpal: #3d136e;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 29px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--perpal);
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--perpal);
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+p {
+    line-height: 1.4;
+}
+
+
+.two-col {
+    display: flex;
+    margin: 0 -15px;
+}
+
+.two-col .content-block {
+    padding: 0 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+
+}
+
+.two-col .content-block img {
+    display: block;
+}
+
+.two-col .content-block a {
+    display: block;
+}
+
+.three-col {
+    display: flex;
+    margin: 0 -15px;
+}
+
+.three-col .content-block {
+    padding: 0 15px;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    overflow: hidden;
+
+}
+
+.three-col .content-block img {
+    transition: all 0.5s;
+}
+.three-col .content-block a{
+    overflow: hidden;
+     width: 100%;
+}
+
+.three-col .content-block a:hover img {
+    transform: scale(1.03);
+}
+
+.product-list {
+    margin: 0 -5px;
+}
+
+.product-item {
+    padding: 0 5px;
+}
+
+.product-item .product-img {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.product-item .product-img img {
+    transition: all 0.5s;
+}
+
+.product-item .product-img a:hover img {
+    transform: scale(1.02);
+}
+
+.product-item .product-img a {
+    display: block;
+}
+
+.product-item .procuct-content .product-label {
+    font-size: 14px;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-bottom: 0;
+    transition: all 0.5s;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-item .procuct-content .product-label:hover {
+    cursor: pointer;
+    color: var(--perpal);
+}
+
+.product-item .procuct-content .price {
+    color: var(--perpal);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.product-item .procuct-content .price .modal-name {
+    font-weight: 600;
+    color: var(--perpal);
+}
+
+.product-item .procuct-content .bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.product-item .procuct-content .bottom-content .action-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-item .procuct-content .bottom-content form {
+    width: 100%;
+}
+
+.product-item.procuct-content .bottom-content p {
+    margin-bottom: 0;
+}
+
+.product-item .procuct-content .bottom-content a {
+    color: var(--perpal);
+    border-bottom: 1px solid var(--perpal);
+    line-height: 1;
+    transition: all 0.5s;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.product-item .procuct-content .bottom-content a:hover {
+    border-bottom: 1px solid transparent;
+}
+
+.custom-heading {
+    display: flex;
+    align-items: center;
+    margin: 0 -15px 20px;
+
+}
+
+.custom-heading h2 {
+    text-transform: uppercase;
+    padding: 0 15px;
+    margin-bottom: 0;
+}
+
+.custom-heading h3 {
+    margin-bottom: 0;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+.custom-heading .mid-line {
+    padding: 0 15px;
+    flex: 1;
+    border-top: 1px solid var(--perpal);
+}
+
+.custom-heading a {
+    padding: 0 15px;
+    color: var(--perpal);
+}
+
+.preorder-section {
+    padding: 30px 0;
+}
+
+.license-section {
+    padding: 30px 0;
+}
+
+.license-section .license-list {
+    list-style: none;
+
+
+}
+
+.license-section .license-list li {
+    border-right: 1px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.manufacturer-section {
+    padding: 30px 0;
+}
+
+.manufacturer-section .manufacturer-list {
+    list-style: none;
+
+}
+
+.manufacturer-section .manufacturer-list li {
+    border-right: 1px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arriving-soon-section {
+    padding: 30px 0;
+}
+
+.trending-section {
+    padding: 30px 0;
+}
+
+
+
+@media (max-width:767px) {
+
+    .two-col {
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .two-col .content-block {
+        padding: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+
+    }
+
+    .two-col .content-block:first-child {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width:576px) {
+    
+.custom-heading {
+flex-direction: column;
+justify-content: start;
+align-items: self-start;
+    margin: 0 0 15px;
+
+}
+
+.custom-heading h2 {
+    padding: 0 ;
+    margin-bottom: 10px;
+}
+
+.custom-heading h3 {
+    margin-bottom: 10px;
+    padding: 0 ;
+}
+
+.custom-heading .mid-line {
+  display: none;
+}
+
+.custom-heading a {
+    padding: 0 ;
+    font-size: 14px;
+  
+}
+    
+}
